@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        				http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="pm" class="com.SpringIOC.gov.PrimeMinister"></bean>
+    
+    
+    
+    <bean id="bmw" class="com.SpringIoC2.impl.BMW">
+    	<constructor-arg name = "name" value="BMW"></constructor-arg>
+    </bean>
+    
+    <bean id="bugatti" class="com.SpringIoC2.impl.Bugatti">
+    	<constructor-arg name="name" value="Bugatti"></constructor-arg>
+    </bean>
+    
+    <bean id="mercedes" class="com.SpringIoC2.impl.Mercedes"
+     init-method="customInit" destroy-method="customDestroy">
+    	<constructor-arg name="name" value="Mercedes"></constructor-arg>
+    </bean>
+
+</beans>
